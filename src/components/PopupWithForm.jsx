@@ -2,7 +2,7 @@ import React from "react";
 
 function PopupWithForm(props) {
   return (
-    <section className={`popup popup_type_${props.name} ${props.isOpen ? "popup_opened" : ""} `}>
+    <section className={`popup  ${props.isOpen ? "popup_opened" : ""} `}>
       <div className="popup__container">
         <h2 className="popup__title">{props.title}</h2>
         <button
@@ -18,7 +18,7 @@ function PopupWithForm(props) {
             className={`edit-form__button edit-form__button_type_${props.name} opacity`}
             type="submit"
           >
-            {props.buttonName}
+            {props.buttonName || 'Сохранить'}
           </button>
         </form>
       </div>

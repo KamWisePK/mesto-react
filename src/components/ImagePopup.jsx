@@ -5,7 +5,7 @@ function ImagePopup({card, onClose}) {
   return (
     <section className="popup popup_type_img">
     <figure className="popup__figure">
-      <img className="popup__img" src={card ? card.link : '#'} alt={card ? card.name : ''}/>
+      <img className="popup__img" src={card?.link} alt={card?.name}/>
       <figcaption className="popup__figcaption">{card ? card.name : ''}</figcaption>
       <button
         className="popup__close-btn opacity"
