@@ -29,8 +29,8 @@
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: data.userName,
-        about: data.userJob,
+        name: data.name,
+        about: data.about,
       }),
     }).then(this._response);
   }
@@ -58,12 +58,12 @@
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        avatar: data.avatarLink,
+        avatar: data.avatar,
       }),
     }).then(this._response);
   }
 
-  likeCard(idCard, isLiked) {
+  changeLikeCardStatus(idCard, isLiked) {
     return fetch(`${this._url}/cards/${idCard}/likes`, {
       method: isLiked ? 'DELETE' : 'PUT',
       headers: this._headers,
