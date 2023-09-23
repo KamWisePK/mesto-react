@@ -40,6 +40,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
     >
       <label className="edit-form__label">
         <input
+          value={name || ""}
           onChange={handleChangeName}
           name="name"
           className="edit-form__input edit-form__input_type_card-name"
@@ -53,6 +54,7 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
       </label>
       <label className="edit-form__label">
         <input
+          value={name || ""}
           onChange={handleChangeLink}
           type="url"
           name="link"
